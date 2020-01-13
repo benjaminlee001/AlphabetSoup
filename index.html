@@ -19,7 +19,7 @@ function distributing() {
 
   return distrubuted;
 }
-  function playMyGame(){
+  function playTheGame(){
   // distribute the letters
   var letters = distributing();
   setTimeout(function(){
@@ -27,24 +27,6 @@ function distributing() {
     console.log(addPoints(userPrompt(letters))); 
   },5000);
 }
-
-//console.log(addPoints("ben"));
-
-function distributing() {
-  var distributed = [];
-  for (var i = 1; i <= 7; i++) {
-    var random = Math.floor(Math.random() * VALS.length);
-    distributed.push(ALPHABET[random]);
-    console.log (ALPHABET[random]);
-  }
- return distributed; 
-//console.log(distributed); 
-}
-
-
-//var letters = ["i","d","e","a","g","l","s"]; 
-
-//userPrompt(letters); 
 
 function userPrompt(letters) {
   var word = prompt('type a valid word with the letters given:');
