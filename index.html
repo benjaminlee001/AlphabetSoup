@@ -12,27 +12,102 @@
 function distributing() {
   var distrubuted =[];
   for (var i = 1; i = 7; i++) {
-    var random = Math.floor(Math.random(0 * VALS.length);
+    var random = Math.floor(Math.random(0 * VALS.length));
     distrubuted.push(ALPHABET[random]);
     console.log (Alphabet[random]);
   }
 
   return distrubuted;
 }
+  function playMyGame(){
+  // distribute the letters
+  var letters = distributing();
+  setTimeout(function(){
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    console.log(addPoints(userPrompt(letters))); 
+  },5000);
+}
+
+//console.log(addPoints("ben"));
+
+function distributing() {
+  var distributed = [];
+  for (var i = 1; i <= 7; i++) {
+    var random = Math.floor(Math.random() * VALS.length);
+    distributed.push(ALPHABET[random]);
+    console.log (ALPHABET[random]);
+  }
+ return distributed; 
+//console.log(distributed); 
+}
+
+
+//var letters = ["i","d","e","a","g","l","s"]; 
+
+//userPrompt(letters); 
+
+function userPrompt(letters) {
+  var word = prompt('type a valid word with the letters given:');
+  // find letter of first index 
+  for (var i=0; i<=word.length-1; i++){
+     var findLetter = word.substring(i, i+1); 
+  // iterate through letters array to find if the first letter of word exists
+     var checking = letters.indexOf(findLetter, 0); 
+  // splice letter that was "checked" and save it to new array 
+     if (checking != -1){
+       (letters.splice(checking,1)[0]);  
+     } else if (checking == -1) {
+       window.alert("word is not valid!");
+       word = ""; 
+     }
+  }
+  console.log(word); 
+  return word; 
+}
+
+function addPoints(word) {  
+  var sum=0;
+  for (var i = 0; i < word.length; i++) {
+    // get current letter
+    var currentLetter = word.substring(i,i+1); // fix 
+    // find the index of the current letter
+    var findIndex = ALPHABET.indexOf(currentLetter); 
+    // find the value (VALS) at the index
+    var findVals = VALS[findIndex]; 
+    // add the value to sum
+    sum+=findVals; 
+  }
+  return sum + " points!";
+}
+  var valuesAndLetters = [
+  ["a",1],
+  ["b",3],
+  ["c",3],
+  ["d",2],
+  ["e",1],
+  ["f",4],
+  ["g",2],
+  ["h",4],
+  ["i",1],
+  ["j",8],
+  ["k",5],
+  ["l",1],
+  ["m",3],
+  ["n",1],
+  ["o",1],
+  ["p",3],
+  ["q",10],
+  ["r",1],
+  ["s",1],
+  ["t",1],
+  ["u",1],
+  ["v",4],
+  ["w",4],
+  ["x",8],
+  ["y",4],
+  ["z",10],
+];
 </script>
 </body>
 </html>
-  
+
