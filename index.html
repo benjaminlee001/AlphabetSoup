@@ -7,18 +7,6 @@
   <title> Alphebet Soup </title>
 </head>
 <body>
-
-<table>
-
-
-
-
-</table>
-
-
-
-
-
 <script>
 
 function distributing() {
@@ -47,7 +35,7 @@ function userPrompt(letters) {
      var findLetter = word.substring(i, i+1); 
   // iterate through letters array to find if the first letter of word exists
      var checking = letters.indexOf(findLetter, 0); 
-  // splice letter that was "checked" and save it to new array
+  // splice letter that was "checked" and save it to new array 
      if (checking != -1){
        (letters.splice(checking,1)[0]);  
      } else if (checking == -1) {
@@ -74,32 +62,32 @@ function addPoints(word) {
   return sum + " points!";
 }
   var valuesAndLetters = [
-  [ "a" , 2 ],
-  [ "b" , 4 ],
-  [ "c" , 2 ],
-  [ "d" , 3 ],
-  [ "e" , 1 ],
-  [ "f" , 2 ],
-  [ "g" , 5 ],
-  [ "h" , 8 ],
-  [ "i" , 2 ],
-  [ "j" , 7 ],
-  [ "k" , 2 ],
-  [ "l" , 4 ],
-  [ "m" , 2 ],
-  [ "n" , 5 ],
-  [ "o" , 7 ],
-  [ "p" , 1 ],
-  [ "q" , 3 ],
-  [ "r" , 1 ],
-  [ "s" , 4 ],
-  [ "t" , 2 ],
-  [ "u" , 1 ],
-  [ "v" , 4 ],
-  [ "w" , 1 ],
-  [ "x" , 7 ],
-  [ "y" , 8 ],
-  [ "z" , 9 ],
+  ["a",2],
+  ["b",2],
+  ["c",2],
+  ["d",2],
+  ["e",2],
+  ["f",2],
+  ["g",2],
+  ["h",2],
+  ["i",2],
+  ["j",2],
+  ["k",2],
+  ["l",2],
+  ["m",2],
+  ["n",1],
+  ["o",1],
+  ["p",1],
+  ["q",1],
+  ["r",1],
+  ["s",1],
+  ["t",1],
+  ["u",1],
+  ["v",1],
+  ["w",1],
+  ["x",1],
+  ["y",1],
+  ["z",1],
 ];
 var ALPHABET = [
   'a', 'a', 'a', 'a', 'a', 'a', 'a','a','a','a','a','a','a','a','a','a',
@@ -130,7 +118,9 @@ var ALPHABET = [
   'z','z',
 ];
 var VALS = [
- 
+
+];
+
 ];
 
 </script>
