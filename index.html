@@ -35,9 +35,9 @@ function userPrompt(letters) {
   // find letter of first index 
   for (var i=0; i<=word.length-1; i++){
      var findLetter = word.substring(i, i+1); 
-  // iterate through letters array to find if the first letter of word exists
+  
      var checking = letters.indexOf(findLetter, 0); 
-  // splice letter that was "checked" and save it to new array
+  
      if (checking != -1){
        (letters.splice(checking,1)[0]);  
      } else if (checking == -1) {
@@ -54,11 +54,11 @@ function addPoints(word) {
   for (var i = 0; i < word.length; i++) {
     // get current letter
     var currentLetter = word.substring(i,i+1); // fix 
-    // find the index of the current letter
+    // finds the index of the current letter
     var findIndex = ALPHABET.indexOf(currentLetter); 
-    // find the value (VALS) at the index
+    // finds the value at the index
     var findVals = VALS[findIndex]; 
-    // add the value to sum
+    // adds the value to sum
     sum+=findVals; 
   }
   return sum + " points!";
